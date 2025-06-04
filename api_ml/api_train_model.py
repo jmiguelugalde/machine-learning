@@ -14,7 +14,7 @@ PASOS=7
 
 scaler = MinMaxScaler(feature_range=(-1, 1))
 
-reframed = transformar(df, scaler)
+reframed = transformar(df, scaler, fit=True)
 
 reordenado=reframed[ ['weekday','month','var1(t-7)','var1(t-6)','var1(t-5)','var1(t-4)','var1(t-3)','var1(t-2)','var1(t-1)','var1(t)'] ]
 reordenado.dropna(inplace=True)

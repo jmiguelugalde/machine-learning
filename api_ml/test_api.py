@@ -16,7 +16,7 @@ df = pd.DataFrame({"unidades": [289,288,260,240,290,255,270,300],
 
 loaded_scaler = load_object('scaler_time_series.pkl')
 
-reframed = transformar(df, loaded_scaler)
+reframed = transformar(df, loaded_scaler, fit=False)
 
 reordenado=reframed[ ['weekday','month','var1(t-7)','var1(t-6)','var1(t-5)','var1(t-4)','var1(t-3)','var1(t-2)','var1(t-1)'] ]
 reordenado.dropna(inplace=True)
